@@ -1,20 +1,20 @@
 module Intro2 where
 -- test Comment
 -- String algebra:
-name = "Alice"
+name = "Alien"
 -- "if" has a special syntax but otherwise a typed version of Lisp's "if":
 name2 = if name /= "" then name else "no name"
 
-pname3 = print "Bob"
+pname3 = print "Bobby"
 
-myprogram = print (1 + m)  -- compiler error: m undefined
-m = 1                      -- unless this line is also present
+myprogram = print (n + m)  -- compiler error: m undefined
+m = 5                      -- unless this line is also present
 
 -- sequencing several imperative programs:
 prg1 = do
   print "hello " 
-  print name  -- level of indentation is important
-
+  print name2  -- level of indentation is important
+n = 3
 -- the same, but using algebra of imperative programs:
 prg1' = sequence_ [print "hello ", print name]
 
@@ -29,6 +29,7 @@ main =
   -- putStrLn pname3 -- Couldn't match type ...; Expected type: String; Actual type: IO ()
   pname3 -- in Lisp: eval pname3
   myprogram; prg1; prg2 -- sequencing, like 3 lines
+  print greet1; print greet2; print greet3
 
 
 -- generic string conversion, using a Java-friendly name:
