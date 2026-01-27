@@ -14,7 +14,9 @@ m = 5                      -- unless this line is also present
 prg1 = do
   print "hello " 
   print name2  -- level of indentation is important
+
 n = 3
+
 -- the same, but using algebra of imperative programs:
 prg1' = sequence_ [print "hello ", print name]
 
