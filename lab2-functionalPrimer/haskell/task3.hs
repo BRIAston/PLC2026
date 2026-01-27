@@ -13,3 +13,17 @@ main = do
     input <- getLine 
     let x = (read input :: Int)
     putStrLn( show (sgnGuards (x)) )
+
+grade score =
+ if score >= 90
+  then "A"
+  else if score >= 80
+   then "B"
+   else if score >= 70
+    then "C"
+    else "F"
+
+gradeGuards score   | score >= 90 = "A"
+                    | score >= 80 = "B"
+                    | score >= 70 = "C"
+                    | otherwise = "F"
